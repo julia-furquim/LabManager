@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqLite" Version="6.0.5" />
-  </ItemGroup>
-
 </Project>
