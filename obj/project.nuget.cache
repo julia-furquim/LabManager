@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "vQ8RU9YwDadeYjGoMVddkE//c7lUro3O59ZOGAfdok81a4Rj8PFb+wHPUNsS9EgAQx0HBfIHuteR/FiMnBzkKw==",
+  "dgSpecHash": "LrDXJ1FXqameDbFW9RKdh4VMak3UZWMLyvzZsvU1YpkCuo9VDxdyg378WmuHi3Dhe3lq7iqk9bRz/9BaEn2zMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Pichau\\OneDrive\\Área de Trabalho\\Projetos\\LabManager\\LabManager.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\IFSP\\Desktop\\SP304419X\\LabManager\\LabManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IFSP\\.nuget\\packages\\microsoft.data.sqlite\\6.0.5\\microsoft.data.sqlite.6.0.5.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.5\\microsoft.data.sqlite.core.6.0.5.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.6\\sqlitepclraw.provider.e_sqlite3.2.0.6.nupkg.sha512",
+    "C:\\Users\\IFSP\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

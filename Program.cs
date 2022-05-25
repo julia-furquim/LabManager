@@ -2,7 +2,12 @@
 using LabManager.Database;
 using LabManager.Repositories;
 
-var databaseSetup = new DatabaseSetup();
+var databaseConfig = new DatabaseConfig();
+
+
+var databaseSetup = new DatabaseSetup(databaseConfig);
+
+var ComputerRepository = new ComputerRepository(databaseConfig);
 
 // Routing
 var modelName = args[0];
@@ -10,12 +15,12 @@ var modelAction = args[1];
 
 if(modelName == "Computer")
 {
-    var computerRepository = new ComputerRepository();
+   
 
     if(modelAction == "List")
     {
         Console.WriteLine("Computer List");
-        var computers = computerRepository.GetAll();
+        var computers = ComputerRepository.GetAll();
         foreach(var computer in computers)
         {
             Console.WriteLine($"{computer.Id}, {computer.Ram}, {computer.Processor}");
@@ -43,6 +48,7 @@ if(modelName == "Computer")
     }
 }
 
+/*
 if(modelName == "Lab")
 {
     var labRepository = new LabRepository();
@@ -80,3 +86,5 @@ if(modelName == "Lab")
         connection.Close();
     }
 }
+
+*/
