@@ -42,7 +42,7 @@ if(modelName == "Computer")
     }
 }
 
-/*
+
 if(modelName == "Lab")
 {
     var labRepository = new LabRepository();
@@ -81,4 +81,3 @@ if(modelName == "Lab")
     }
 }
 
-*/
