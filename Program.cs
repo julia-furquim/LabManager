@@ -80,17 +80,12 @@ if(modelName == "Lab")
         connection.Close();
     }
 
+
     if(modelAction == "Show")
     {
         var id = Convert.ToInt32(args[2]);
         var computer = computerRepository.GetById(id);
         Console.WriteLine($"{computer.Id}, {computer.Ram}, {computer.Processor}");
-    }
-
-    if(modelAction == "Delete")
-    {
-        var id = Convert.ToInt32(args[2]);
-        computerRepository.Delete(id);
     }
 
     if(modelAction == "Update")
@@ -102,4 +97,11 @@ if(modelName == "Lab")
         var computer = new Computer(id, ram, processor);
         computerRepository.Update(computer);
     }
+  
+   if(modelAction == "Delete")
+    {
+        var id = Convert.ToInt32(args[2]);
+        computerRepository.Delete(id);
+    }
+
 }
