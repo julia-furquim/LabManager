@@ -11,6 +11,9 @@ var databaseSetup = new DatabaseSetup(databaseConfig);
 
 var ComputerRepository = new ComputerRepository(databaseConfig);
 
+var LabRepository = new LabRepository(databaseConfig);
+
+
 // Routing
 var modelName = args[0];
 var modelAction = args[1];
@@ -42,15 +45,48 @@ if(modelName == "Computer")
     }
 }
 
+ if(modelAction == "Show")
+    {
+        var id = Convert.ToInt32(args[2]);
+
+        if(ComputerRepository.ExitsById(id))
+        {
+            var computer = ComputerRepository.GetById(id);
+            Console.WriteLine($"{computer.Id}, {computer.Ram}, {computer.Processor}");
+        } 
+        else 
+        {
+            Console.WriteLine($"O computador com Id {id} não existe.");
+        }
+    }
+
+    if(modelAction == "Delete")
+    {
+        var id = Convert.ToInt32(args[2]);
+        ComputerRepository.Delete(id);
+    }
+
+    if(modelAction == "Update")
+    {
+        var id = Convert.ToInt32(args[2]);
+        string ram = args[3];
+        string processor = args[4];
+
+        var computer = new Computer(id, ram, processor);
+        ComputerRepository.Update(computer);
+    }
+
+    /*...........................................................*/
+
 
 if(modelName == "Lab")
 {
-    var labRepository = new LabRepository();
+    /*var labRepository = new LabRepository();*/
 
     if(modelAction == "List")
     {
         Console.WriteLine("Lab List");
-        var labs = labRepository.GetAll();
+        var labs = LabRepository.GetAll();
         foreach(var lab in labs)
         {
             Console.WriteLine($"{lab.Id}, {lab.Number}, {lab.Name}, {lab.Block}");
@@ -79,27 +115,27 @@ if(modelName == "Lab")
         command.ExecuteNonQuery();
         connection.Close();
     }
-
     if(modelAction == "Show")
     {
         var id = Convert.ToInt32(args[2]);
-        var computer = computerRepository.GetById(id);
-        Console.WriteLine($"{computer.Id}, {computer.Ram}, {computer.Processor}");
+        var lab = LabRepository.GetById(id);
+        Console.WriteLine($"{lab.Id}, {lab.Number}, {lab.Name}, {lab.Block}");
     }
 
     if(modelAction == "Delete")
     {
         var id = Convert.ToInt32(args[2]);
-        computerRepository.Delete(id);
+        LabRepository.Delete(id);
     }
 
     if(modelAction == "Update")
     {
         var id = Convert.ToInt32(args[2]);
-        string ram = args[3];
-        string processor = args[4];
+        string number = args[3];
+        string name = args[4];
+        string block = args[5];
 
-        var computer = new Computer(id, ram, processor);
-        computerRepository.Update(computer);
+        var lab = new Lab(id, number, name, block);
+        LabRepository.Update(lab);
     }
 }
