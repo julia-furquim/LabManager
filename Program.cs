@@ -2,6 +2,7 @@
 using LabManager.Database;
 using LabManager.Repositories;
 using LabManager.Models;
+using Dapper;
 
 
 var databaseConfig = new DatabaseConfig();
@@ -117,9 +118,20 @@ if(modelName == "Lab")
     }
     if(modelAction == "Show")
     {
+       
+    {
         var id = Convert.ToInt32(args[2]);
-        var lab = LabRepository.GetById(id);
-        Console.WriteLine($"{lab.Id}, {lab.Number}, {lab.Name}, {lab.Block}");
+
+        if(LabRepository.ExitsById(id))
+        {
+            var lab = LabRepository.GetById(id);
+            Console.WriteLine($"{lab.Id}, {lab.Number}, {lab.Name}, {lab.Block}");
+        } 
+        else 
+        {
+            Console.WriteLine($"O lab com Id {id} não existe.");
+        }
+    }
     }
 
     if(modelAction == "Delete")

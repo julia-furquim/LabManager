@@ -103,3 +103,4 @@ C:\Users\IFSP\Desktop\SP304419X\LabManager\bin\Debug\net6.0\runtimes\win-x86\nat
 C:\Users\IFSP\Desktop\SP304419X\LabManager\obj\Debug\net6.0\LabManager.csproj.CopyComplete
 C:\Users\IFSP\Desktop\SP304419X\LabManager\obj\Debug\net6.0\LabManager.genruntimeconfig.cache
 C:\Users\IFSP\Desktop\SP304419X\LabManager\obj\Debug\net6.0\ref\LabManager.dll
+C:\Users\Pichau\OneDrive\Área de Trabalho\Projetos\LabManager\bin\Debug\net6.0\Dapper.dll
